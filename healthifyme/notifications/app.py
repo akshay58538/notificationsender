@@ -34,6 +34,13 @@ app.register_error_handler(403, http_error)
 app.register_error_handler(Exception, generic_error)
 
 
+def register_blueprints():
+    from healthifyme.notifications.resources.notification_spec import notification_spec_blueprint
+    app.register_blueprint(notification_spec_blueprint)
+
+register_blueprints()
+
+
 if __name__ == '__main__':
     handler = RotatingFileHandler('foo.log', maxBytes=10000, backupCount=1)
     handler.setLevel(logging.INFO)

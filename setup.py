@@ -19,6 +19,7 @@ dependencies = [
     'Flask-SQLAlchemy==2.1',
     'Flask-Inputs==0.2.0',
     'jsonschema==2.6.0',
+    'pymysql',
     'gunicorn',
     'enum34'
 ]
@@ -59,7 +60,7 @@ setup(
     # simple. Or you can use find_packages().
     packages=find_packages(exclude=['contrib', 'docs', 'tests', 'scripts', 'build', 'dist']),
     package_data={
-        'plivo': ['sms/config/*.json'],
+        'healthifyme': ['notifications/config/*.json'],
         '': ['VERSION']
     },
 

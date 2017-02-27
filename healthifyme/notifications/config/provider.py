@@ -39,4 +39,4 @@ class ConfigProvider(object):
         return self.config.get('env')
 
     def getMySqlConfig(self):
-        return self.config.get('env')
+        return self.config.get('connections', {}).get('mysql', {})
