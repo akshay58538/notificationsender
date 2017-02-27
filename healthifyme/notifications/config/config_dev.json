@@ -1,0 +1,7 @@
+{
+  "connections": {
+    "mysql": {
+      "url": "mysql://root@localhost"
+    }
+  }
+}
